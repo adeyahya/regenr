@@ -2,11 +2,12 @@
   "name": "regen",
   "version": "1.0.0",
   "description": "ReactJs Generator",
+  "repository": "adeyahya/regen",
+  "author": "Ade Yahya <adeyahyaprasetyo@gmail.com> (http://ihavemind.com/)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "ade yahya",
   "license": "MIT",
   "bin": {
     "regen": "./index.js"
