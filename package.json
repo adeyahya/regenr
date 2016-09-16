@@ -13,6 +13,7 @@
     "regenr": "./index.js"
   },
   "dependencies": {
+    "colors": "^1.1.2",
     "commander": "^2.9.0",
     "filendir": "^1.0.0"
   }

@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 var program = require('commander'),
-	fs = require('filendir');
+	filendir = require('filendir'),
+	colors = require('colors');
+
 
 var createTemplate = () => {
 
@@ -31,26 +33,28 @@ var createFile = function(path) {
 	var filename = path.match(/[^\\|\/]*$/)[0]
 	var dir = path.substring((path.match(/[^\\|\/]*$/).index), -1)
 
-	console.log(`filename ${filename} dir ${dir}`)
+	console.log("\n"+`=====================
+== React Generator == 
+=====================`)
 
-	fs.writeFile(dir + filename + "/" + filename + ".js", getTemplate(filename), function(err) {
+	filendir.writeFile(dir + filename + "/" + filename + ".js", getTemplate(filename), function(err) {
 		if (err) return console.log(err)
 
-		console.log(`Created ${dir}${filename}/${filename}.js`)
+		console.log("Created " + `${dir}${filename}/` + colors.yellow.underline(`${filename}.js`))
 		return true;
 	})
 
-	fs.writeFile(dir + filename + "/" + filename + ".scss",
+	filendir.writeFile(dir + filename + "/" + filename + ".scss",
 		`.${filename}{
 	// your code here
 }`, function(err) {
 		if (err) return console.log(err)
 
-		console.log(`Created ${dir}${filename}/${filename}.scss`)
+		console.log('Created ' + `${dir}${filename}/` + colors.blue.underline(`${filename}.scss`))
 		return true;
 	})
 
-	fs.writeFile(dir + filename + "/" + "package.json",
+	filendir.writeFile(dir + filename + "/" + "package.json",
 		`{
 	"name": "${filename}",
 	"version": "0.0.0",
@@ -60,7 +64,7 @@ var createFile = function(path) {
 `, function(err) {
 		if (err) return console.log(err)
 
-		console.log(`Created ${dir}${filename}/package.json`)
+		console.log("Created " + `${dir}${filename}/` + colors.magenta.underline(`package.json`))
 		return true;
 	})
 }
