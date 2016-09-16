@@ -41,13 +41,13 @@ export default ${componentName};
 	var getStyle = (componentName,style) => {
 		style = style || 'scss'
 
-		if (style === 'scss' || style === 'css' || style === 'stylus' || style === 'less') {
+		if (style === 'sass') {
+			return `.${componentName}
+	//Your code here`
+		} else {
 			return `.${componentName} {
 	//Your code here
 }`
-		} else if (style === 'sass') {
-			return `.${componentName}
-	//Your code here`
 		}
 	}
 
