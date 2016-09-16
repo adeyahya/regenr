@@ -2,7 +2,7 @@
   "name": "regenr",
   "version": "1.0.0",
   "description": "ReactJs Generator",
-  "repository": "adeyahya/regen",
+  "repository": "adeyahya/regenr",
   "author": "Ade Yahya <adeyahyaprasetyo@gmail.com> (http://ihavemind.com/)",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "license": "MIT",
   "bin": {
-    "regen": "./index.js"
+    "regenr": "./index.js"
   },
   "dependencies": {
     "commander": "^2.9.0",
