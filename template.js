@@ -2,7 +2,7 @@ var template = (() => {
 	var options = {
 		css: 'scss',
 		privateRep: true,
-		cssModules: true
+		cssModules: false
 	}
 
 	var getJson = (componentName, privateRep) => {
@@ -28,7 +28,7 @@ class ${componentName} extends React.Component {
   }
   render() {
     return (
-			<div ${cssModules ? 'className={' + componentName + '}' : '' }>
+			<div ${cssModules ? 'className={' + 'styles.' + componentName + '}' : '' }>
 			</div>
     )
   }
