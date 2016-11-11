@@ -28,7 +28,7 @@ class ${componentName} extends React.Component {
   }
   render() {
     return (
-			<div ${cssModules ? 'className={' + 'styles.' + componentName + '}' : '' }>
+			<div ${cssModules ? 'className={ ' + 'styles.' + componentName + ' }' : '' }>
 				{/* Your code here */}
 			</div>
     )
