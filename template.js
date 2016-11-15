@@ -23,8 +23,7 @@ var template = (() => {
 ${cssModules ? "import styles from './" + componentName + '.' + style + "'" : ''}
 class ${componentName} extends React.Component {
   constructor(props) {
-    super(props);
-    this.displayName = '${componentName}';
+    super(props)
   }
   render() {
     return (
@@ -35,7 +34,7 @@ class ${componentName} extends React.Component {
   }
 }
 
-export default ${componentName};
+export default ${componentName}
 `
 	}
 
