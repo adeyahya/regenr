@@ -43,10 +43,10 @@ export default ${componentName}`
 
 		if (style === 'sass') {
 			return `.${componentName}
-	//Your code here`
+	/* Your stylesheet here */`
 		} else {
 			return `.${componentName} {
-	//Your code here
+	/* Your stylesheet here */
 }`
 		}
 	}
