@@ -13,29 +13,29 @@ var template = (() => {
 	"version": "0.0.0",
 	"private": ${privateRep},
 	"main": "./${componentName}.js"
-}
-`
+}`
 	}
 
 	var getReact = (componentName, style, cssModules) => {
 		cssModules = cssModules || options.cssModules
 		return `import React from 'react'
 ${cssModules ? "import styles from './" + componentName + '.' + style + "'" : ''}
+
 class ${componentName} extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-  render() {
-    return (
+	constructor(props) {
+		super(props)
+	}
+
+	render() {
+		return (
 			<div ${cssModules ? 'className={ ' + 'styles.' + componentName + ' }' : '' }>
 				{/* Your code here */}
 			</div>
-    )
-  }
+		)
+	}
 }
 
-export default ${componentName}
-`
+export default ${componentName}`
 	}
 
 	var getStyle = (componentName,style) => {
@@ -43,10 +43,10 @@ export default ${componentName}
 
 		if (style === 'sass') {
 			return `.${componentName}
-	//Your code here`
+	/* Your stylesheet here */`
 		} else {
 			return `.${componentName} {
-	//Your code here
+	/* Your stylesheet here */
 }`
 		}
 	}
