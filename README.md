@@ -14,21 +14,22 @@ Example:
 `regenr src/Components/Header` will provides:
 
 *Header.js*
-```javascipt
+```javascript
 import React from 'react'
 import styles from './Header.scss'
 
 class Header extends React.Component {
-  constructor(props) {
-    super(props);
-    this.displayName = 'Header';
-  }
-  render() {
-    return (
-            <div className={styles.Header}>
-            </div>
-    )
-  }
+	constructor(props) {
+		super(props)
+		this.displayName = 'Header'
+	}
+	render() {
+		return (
+			<div className={styles.Header}>
+				{/* Your code here */}
+			</div>
+		)
+	}
 }
 
 export default Header
@@ -37,17 +38,17 @@ export default Header
 *Header.scss*
 ```sass
 .Header{
-    // your code here
+		/* Your stylesheet here */
 }
 ```
 
 *package.json*
 ```json
 {
-    "name": "Header",
-    "version": "0.0.0",
-    "private": true,
-    "main": "./Header.js"
+		"name": "Header",
+		"version": "0.0.0",
+		"private": true,
+		"main": "./Header.js"
 }
 ```
 
