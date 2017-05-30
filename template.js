@@ -5,15 +5,10 @@ var template = (() => {
 		cssModules: false
 	}
 
-	var getJson = (componentName, privateRep) => {
+	var getIndex = (componentName, privateRep) => {
 		privateRep = privateRep || options.privateRep
 		
-		return `{
-	"name": "${componentName}",
-	"version": "0.0.0",
-	"private": ${privateRep},
-	"main": "./${componentName}.js"
-}`
+		return `export default "./${componentName}.js"`
 	}
 
 	var getReact = (componentName, style, cssModules) => {
@@ -54,7 +49,7 @@ export default ${componentName}`
 	return {
 		getStyle: getStyle,
 		getReact: getReact,
-		getJson: getJson
+		getIndex: getIndex
 	}
 })()
 
