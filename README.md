@@ -42,14 +42,9 @@ export default Header
 }
 ```
 
-*package.json*
-```json
-{
-		"name": "Header",
-		"version": "0.0.0",
-		"private": true,
-		"main": "./Header.js"
-}
+*index.js*
+```javascript
+export default './Header.js'
 ```
 
 #Options
