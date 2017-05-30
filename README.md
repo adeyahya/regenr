@@ -1,13 +1,13 @@
 # Regenr
 React Generator
 
-##Summary
+## Summary
 Regenr is a command-line interface that helps Generating ReactJs Components.
 
-##Installation
+## Installation
 `npm install -g regenr`
 
-##Usage
+## Usage
 `regenr <path>/<componentName> [options]` 
 
 Example:
@@ -47,7 +47,7 @@ export default Header
 export default './Header.js'
 ```
 
-#Options
+# Options
 `-c [css preprocessor]` or `--css [css preprocessor]`
 
 Example:
@@ -55,8 +55,9 @@ Example:
 
 Will provide .less integration
 
-###Screenshot
+### Screenshot
+
 ![Screenshot](/ss1.png?raw=true "Screenshot")
 
-###License
+### License
 MIT
