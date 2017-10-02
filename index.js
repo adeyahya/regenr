@@ -25,9 +25,9 @@ var createFile = function(path,css) {
 		return true;
 	})
 
-	filendir.writeFile(dir + filename + "/" + "index.js", templates.getIndex(filename, true) , function(err) {
+	filendir.writeFile(dir + filename + "/" + "package.json", templates.getIndex(filename, true) , function(err) {
 		if (err) return console.log(err)
-		
+
 		console.log("Created " + `${dir}${filename}/` + colors.magenta.underline(`index.js`))
 		return true;
 	})

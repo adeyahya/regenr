@@ -7,8 +7,12 @@ var template = (() => {
 
 	var getIndex = (componentName, privateRep) => {
 		privateRep = privateRep || options.privateRep
-		
-		return `module.exports = require("./${componentName}.js")`
+		return `{
+      "name": "${componentName}",
+      "version": "0.0.0",
+      "private": ${privateRep},
+      "main": "./${componentName}.js"
+    }`
 	}
 
 	var getReact = (componentName, style, cssModules) => {

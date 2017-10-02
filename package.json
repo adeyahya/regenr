@@ -1,9 +1,9 @@
 {
   "name": "regenr",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "ReactJs Generator",
   "repository": "adeyahya/regenr",
-  "author": "Ade Yahya <adeyahyaprasetyo@gmail.com> (http://ihavemind.com/)",
+  "author": "Ade Yahya <adeyahyaprasetyo@gmail.com> (http://paradork.com/)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
