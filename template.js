@@ -8,11 +8,11 @@ var template = (() => {
 	var getIndex = (componentName, privateRep) => {
 		privateRep = privateRep || options.privateRep
 		return `{
-      "name": "${componentName}",
-      "version": "0.0.0",
-      "private": ${privateRep},
-      "main": "./${componentName}.js"
-    }`
+  "name": "${componentName}",
+  "version": "0.0.0",
+  "private": ${privateRep},
+  "main": "./${componentName}.js"
+}`
 	}
 
 	var getReact = (componentName, style, cssModules) => {
