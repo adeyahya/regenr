@@ -4,7 +4,6 @@ const	filendir = require('filendir');
 const	colors = require('colors');
 const templates = require('./template.js');
 const fs = require('fs');
-const R = require('ramda')
 const inquirer = require("inquirer")
 const path = require("path")
 

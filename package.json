@@ -16,7 +16,6 @@
     "colors": "^1.1.2",
     "commander": "^2.9.0",
     "filendir": "^1.0.0",
-    "inquirer": "^3.3.0",
-    "ramda": "^0.25.0"
+    "inquirer": "^3.3.0"
   }
 }
