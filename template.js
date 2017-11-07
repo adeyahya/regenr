@@ -1,60 +1,32 @@
-var template = (() => {
-	var options = {
-		css: 'scss',
-		privateRep: true,
-		cssModules: false
-	}
-
-	var getIndex = (componentName, privateRep) => {
-		privateRep = privateRep || options.privateRep
-		return `{
+module.exports = {
+  index: (componentName, extension) => {
+    return `{
   "name": "${componentName}",
   "version": "0.0.0",
-  "private": ${privateRep},
-  "main": "./${componentName}.js"
+  "private": true,
+  "main": "./${componentName}.${extension}"
 }`
-	}
+  },
 
-	var getReact = (componentName, style, cssModules) => {
-		cssModules = cssModules || options.cssModules
-		return `import React from 'react'
-${cssModules ? "import styles from './" + componentName + '.' + style + "'" : ''}
+  react: (componentName, config) => {
+    return `${config.typechecker === "flow" ? "//@flow" : null}
+import React from "react";
 
-class ${componentName} extends React.Component {
-	constructor(props) {
-		super(props)
-	}
-
-	render() {
-		return (
-			<div ${cssModules ? 'className={ ' + 'styles.' + componentName + ' }' : '' }>
-				{/* Your code here */}
-			</div>
-		)
-	}
+class ${componentName} extends React.Component<{}> {
+  render() {
+    return (
+      {/* your code here */}
+    )
+  }
 }
 
-export default ${componentName}`
-	}
-
-	var getStyle = (componentName,style) => {
-		style = style || 'scss'
-
-		if (style === 'sass') {
-			return `.${componentName}
-	/* Your stylesheet here */`
-		} else {
-			return `.${componentName} {
-	/* Your stylesheet here */
+export default ${componentName};
+`
+  },
+  config: config => {
+    return `module.exports = {
+  stylesheet: "${config.stylesheet}",
+  typechecker: "${config.typechecker}",
 }`
-		}
-	}
-
-	return {
-		getStyle: getStyle,
-		getReact: getReact,
-		getIndex: getIndex
-	}
-})()
-
-module.exports = template;
+  }
+}
