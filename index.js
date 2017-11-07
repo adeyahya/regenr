@@ -71,6 +71,7 @@ const createFile = (file, config) => {
       )
 
       if (config.stylesheet != "none") {
+        console.log(config.stylesheet)
         const styleExtension = config.stylesheet === "styled-jsx" ? "js" : config.stylesheet
         filendir.writeFile(
           path.join(fullPath, "style." + styleExtension),
@@ -99,7 +100,7 @@ const initialize = (file, program) => {
       console.log(colors.red("can't find config file, try to run:") + "\n=> regenr init")
 
     if (data) {
-      const config = require("./regenr.config.js")
+      const config = require(path.join(process.cwd(), "regenr.config.js"))
       return createFile(file, config)
     }
   })
