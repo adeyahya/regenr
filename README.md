@@ -8,10 +8,15 @@ Regenr is a command-line interface that helps Generating ReactJs Components.
 `npm install -g regenr`
 
 ## Usage
-`regenr <path>/<componentName> [options]` 
+```bash
+$ regenr <path>/<componentName> [options]
+``` 
 
 Example:
-`regenr src/Components/Header` will provides:
+```bash
+$ regenr src/Components/Header
+```
+will provides:
 
 *Header.js*
 ```javascript
@@ -19,17 +24,17 @@ import React from 'react'
 import styles from './Header.scss'
 
 class Header extends React.Component {
-	constructor(props) {
-		super(props)
-		this.displayName = 'Header'
-	}
-	render() {
-		return (
-			<div className={styles.Header}>
-				{/* Your code here */}
-			</div>
-		)
-	}
+  constructor(props) {
+    super(props)
+    this.displayName = 'Header'
+  }
+  render() {
+    return (
+      <div className={styles.Header}>
+        {/* Your code here */}
+      </div>
+    )
+  }
 }
 
 export default Header
@@ -38,12 +43,12 @@ export default Header
 *Header.scss*
 ```sass
 .Header{
-		/* Your stylesheet here */
+  /* Your stylesheet here */
 }
 ```
 
 *index.js*
-```javascript
+```js
 export default './Header.js'
 ```
 
@@ -51,7 +56,9 @@ export default './Header.js'
 `-c [css preprocessor]` or `--css [css preprocessor]`
 
 Example:
-`regenr src/Components/Header -c less`
+```bash
+$ regenr src/Components/Header -c less
+```
 
 Will provide .less integration
 
